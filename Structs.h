@@ -30,7 +30,16 @@ struct NodeResumen{
         this->right = &b;
 
     };
+    NodeResumen(NodeResumen a, NodeResumen b){
+        this->capacity = a.capacity + b.capacity;
+        this->size = a.size + b.size;
+        this->left = &a;
+        this->right = &b;
+
+    };
 };
+
+/*
 struct NodeResumen1{
     int capacity; // capacidad de ambos Nodos Array
     int size; // suma de la cantidad de elementos de ambos Nodos Array
@@ -45,3 +54,4 @@ struct NodeResumen1{
 
     };
 };
+*/
