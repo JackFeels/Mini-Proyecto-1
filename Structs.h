@@ -40,6 +40,7 @@ struct NodeResumen{
 };
 
 /*
+
 struct NodeResumen1{
     int capacity; // capacidad de ambos Nodos Array
     int size; // suma de la cantidad de elementos de ambos Nodos Array
