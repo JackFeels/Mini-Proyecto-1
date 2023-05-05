@@ -6,5 +6,6 @@
         "memory": "cpp",
         "string_view": "cpp",
         "unordered_map": "cpp"
-    }
+    },
+    "cmake.configureOnOpen": true
 }

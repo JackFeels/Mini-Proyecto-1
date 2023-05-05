@@ -97,3 +97,25 @@ bool ListArray::find(int v)
     cout << "El elemento " << v << " NO se encuentra en el ListArr" << endl;
     return false;
 }
+int ListArray::totalNodes(){
+    NodeArray *actual_node = this->head;
+    int totalNodes = 0;
+    while (actual_node!= nullptr)
+    {
+        totalNodes = totalNodes + 1;
+        actual_node = actual_node->next;
+    }
+    return totalNodes;
+}
+
+void ListArray::createNodeR(){
+    NodeArray *actual_node = this->head;
+        while (actual_node != nullptr && actual_node->next != nullptr)
+    {
+        for (int i = 1; i <= this->totalNodes()/2; i++){
+            NodeResumen NR_i (*actual_node, *actual_node->next);
+            cout << "Nodo Resumen" << i << " size: " << NR_i.size << endl;
+        }   
+        actual_node = actual_node->next->next;
+    }
+}
