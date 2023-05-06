@@ -110,12 +110,15 @@ int ListArray::totalNodes(){
 
 void ListArray::createNodeR(){
     NodeArray *actual_node = this->head;
+    for (int i = 1; i <= this->totalNodes()/2; i++)
+    {      
         while (actual_node != nullptr && actual_node->next != nullptr)
     {
-        for (int i = 1; i <= this->totalNodes()/2; i++){
+        //for (int i = 1; i <= this->totalNodes()/2; i++){
             NodeResumen NR_i (*actual_node, *actual_node->next);
             cout << "Nodo Resumen" << i << " size: " << NR_i.size << endl;
-        }   
+        //}   
         actual_node = actual_node->next->next;
+        }
     }
 }
