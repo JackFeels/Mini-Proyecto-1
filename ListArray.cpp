@@ -108,7 +108,7 @@ int ListArray::totalNodes(){
     return totalNodes;
 }
 
-void ListArray::createNodeR(){
+/*void ListArray::createNodeR(){
     NodeArray *actual_node = this->head;
     for (int i = 1; i <= this->totalNodes()/2; i++)
     {   
@@ -123,3 +123,5 @@ void ListArray::createNodeR(){
         }
     }
 }
+}
+*/

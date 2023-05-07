@@ -1,4 +1,7 @@
 #include "ListArr.h"
+#include <vector>
+#include "SummaryNode.h"
+#include "NodeArray.h"
 
 class ListArray : public ListArr{
 private:
@@ -12,6 +15,5 @@ ListArray(int capacity);
  void insert(int v, int i); //Inserta un nuevo valor v en el índice i del ListArr.
  void print(); //Imprime por pantalla todos los valores almacenados en el ListArr.
  bool find(int v); //Busca en el ListArr si el valor v se encuentra almacenado.
- void createNodeR();
  int totalNodes();
 };

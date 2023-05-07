@@ -1,4 +1,6 @@
 #include "ListArray.h"
+#include "SummaryNode.h"
+#include "ListArray_utils.h"
 
 int main(){
     int capacidad; // tamaño arreglo b
@@ -36,4 +38,4 @@ int main(){
     cout << l_a.totalNodes() <<endl;
     return 0;
     
-}
+}  

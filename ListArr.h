@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "Structs.h"
+#include "NodeArray.h"
 using namespace std;
 
 class ListArr{
