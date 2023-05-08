@@ -1,4 +1,5 @@
 #include "ListArray.h"
+#include "ListArray_utils.h"
 
 int main(){
     int capacidad; // tamaño arreglo b
@@ -30,10 +31,13 @@ int main(){
     //l_a.insert_right(65);
     //l_a.insert_right(96);
 
+
+    SummaryNode* root = createSummaryNodeTree(*l_a);
+
     //cout << "size: " << l_a.size() << endl;
     l_a.print();
-    l_a.createNodeR();
-    cout << l_a.totalNodes() <<endl;
+    //l_a.createNodeR();
+    //cout << l_a.totalNodes() <<endl;
     return 0;
     
 }

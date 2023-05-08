@@ -1,9 +1,10 @@
+#pragma once
 #include "ListArr.h"
 
 class ListArray : public ListArr{
-private:
-    NodeArray* head;
+
 public:
+NodeArray* head;
 ListArray(int capacity);
 ~ListArray();
  int size(); //Retorna la cantidad de elementos almacenados en el ListArr

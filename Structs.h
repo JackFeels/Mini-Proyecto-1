@@ -28,13 +28,13 @@ struct NodeResumen{
         this->size = a.size + b.size;
         this->left = &a;
         this->right = &b;
-
     };
+    
     NodeResumen(NodeResumen a, NodeResumen b){
         this->capacity = a.capacity + b.capacity;
         this->size = a.size + b.size;
         this->left = &a;
-        this->right = &b;
+        this->right = &b;                             
 
     };
 };

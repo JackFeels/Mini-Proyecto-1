@@ -2,11 +2,11 @@
 
 ListArray::ListArray(int capacity)
 {
-    head = new NodeArray(capacity);
+    head = new NodeArray(capacity, nullptr);
     head->size = 0;
     head->capacity = capacity;
-    head->next = nullptr;
 }
+
 ListArray::~ListArray()
 {
     NodeArray *nodo_actual = head;
@@ -32,9 +32,9 @@ void ListArray::insert_left(int v)
 {
     if (head->size == head->capacity)
     {
-        NodeArray *new_node = new NodeArray(head->capacity);
+        NodeArray *new_node = new NodeArray(head->capacity, head);
         new_node->size = 0;
-        new_node->next = head;
+        //new_node->next = head;
         head = new_node;
     }
     for (int i = head->size; i > 0; i--)
@@ -63,10 +63,10 @@ void ListArray::insert_right(int v) {
         nodo_actual = nodo_actual->next;
     }
     if (nodo_actual->size == nodo_actual->capacity) {
-        nodo_actual->next = new NodeArray(head->capacity);
+        nodo_actual->next = new NodeArray(head->capacity, nullptr);
         nodo_actual = nodo_actual->next;
         nodo_actual->size = 0;
-        nodo_actual->next = nullptr;
+        //nodo_actual->next = nullptr;
     }
     nodo_actual->data[nodo_actual->size] = v;
     nodo_actual->size++;
@@ -108,6 +108,7 @@ int ListArray::totalNodes(){
     return totalNodes;
 }
 
+/*
 void ListArray::createNodeR(){
     NodeArray *actual_node = this->head;
     for (int i = 1; i <= this->totalNodes()/2; i++)
@@ -116,10 +117,12 @@ void ListArray::createNodeR(){
     {
         //for (int i = 1; i <= this->totalNodes()/2; i++){
             NodeResumen NR_i (*actual_node, *actual_node->next);
-            cout << "Nodo Resumen" << i << " size: " << NR_i.size << endl;
-        //}   
+            cout << "Nodo Resumen " << i << ". Size: " << NR_i.size << endl; 
+        //}  
         i++;
+        
         actual_node = actual_node->next->next;
         }
     }
 }
+*/
