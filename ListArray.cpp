@@ -90,7 +90,7 @@ void ListArray::print()
 }
 
 void ListArray::insert_right(int v) {
-    insert(l_size-1,v);
+    insert(getSize()-1,v);
 }
 void ListArray::insert(int v, int i)
 {
