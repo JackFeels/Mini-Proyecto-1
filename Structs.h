@@ -40,12 +40,50 @@ struct NodeResumen{
         this->right = &b;   
     };
 
-    
+
 
 
 };
 
 /*
+NodoResumen::NodoResumen(NodoResumen* left, NodoResumen* right,int capacity, int maxCapacity)
+{
+    this->son = nullptr;
+    this->left = left;
+    this->right = right;
+    this->capacity = capacity;
+    this->maxCapacity = maxCapacity;
+}
+
+NodoResumen::NodoResumen(int capacity, int maxCapacity)
+{
+    this->son = nullptr;
+    this->left = nullptr;
+    this->right = nullptr;
+    this->capacity = capacity;
+    this->maxCapacity = maxCapacity;
+}
+
+NodoResumen::NodoResumen(Nodo *son, int capacity, int maxCapacity)
+{
+    this->son = son;
+    this->left = nullptr;
+    this->right = nullptr;
+    this->capacity = capacity;
+    this->maxCapacity = maxCapacity;
+}
+
+NodoResumen::NodoResumen(NodoResumen* left, NodoResumen* right)
+{
+    this->son = nullptr;
+    this->left = left;
+    this->right = right;
+    this->capacity = 0;
+    this->maxCapacity = 0;
+
+}
+
+END!!!!!
 
 struct NodeResumen1{
     int capacity; // capacidad de ambos Nodos Array
