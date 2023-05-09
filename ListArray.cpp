@@ -72,18 +72,7 @@ int ListArray::size()
 }
 void ListArray::insert_left(int v)
 {
-    if (head->getSize() == head->getCapacity())
-    {
-        NodeArray *new_node = new NodeArray(head->getCapacity(), head);
-        new_node->setSize(0);
-        head = new_node;
-    }
-    for (int i = head->getSize(); i > 0; i--)
-    {
-        head->setData(i, head->getData()[i - 1]);
-    }
-    head->setData(0, v);
-    head->setSize(head->getSize() + 1);
+    insert(0,v);
 }
 
 void ListArray::print()
@@ -101,30 +90,21 @@ void ListArray::print()
 }
 
 void ListArray::insert_right(int v) {
-    NodeArray* nodo_actual = head;
-    while (nodo_actual->getNext() != nullptr) {
-        nodo_actual = nodo_actual->getNext();
-    }
-    if (nodo_actual->getSize() == nodo_actual->getCapacity()) {
-        NodeArray* new_node = new NodeArray(head->getCapacity(), nullptr);
-        nodo_actual->setNext(new_node);
-        nodo_actual = nodo_actual->getNext();
-        nodo_actual->setSize(0);
-    }
-    nodo_actual->setData(nodo_actual->getSize(), v);
-    nodo_actual->setSize(nodo_actual->getSize() + 1);
+    insert(l_size-1,v);
 }
-void ListArray::insert(int v, int i){
-    if(i > this->getSize())
-    {
-      throw out_of_range("Indice fuera de rango");
-      return
-    }
-
+void ListArray::insert(int v, int i)
+{
     if (actual_nodes != totalNodes())
     {
         createTree();
     }
+    
+    if (i > getSize())
+    {
+        throw out_of_range("Indice fuera de rango");
+        return;
+    }
+
     SummaryNode* current = arbol.front();
     while (current->getHijo() == nullptr)
     {
@@ -132,7 +112,7 @@ void ListArray::insert(int v, int i){
         {
             current = current->getLeft();
         }
-            else
+        else
         {
             i = i - current->getLeft()->getSize();
             current = current->getRight();
