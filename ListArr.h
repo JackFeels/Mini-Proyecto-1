@@ -6,7 +6,6 @@ using namespace std;
 
 class ListArr{
 private:
-
 public:
 virtual int size()=0; //Retorna la cantidad de elementos almacenados en el ListArr
 virtual void insert_left(int v)=0; //Inserta un nuevo valor v a la izquierda del ListArr. Equivalentemente, inserta el valor v en el índice 0

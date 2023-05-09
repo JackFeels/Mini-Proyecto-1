@@ -42,12 +42,13 @@ int main(){
 
     //cout << "size: " << l_a.size() << endl;
     l_a.print();
-    vector <NodeResumen*> resumenNodes = l_a.createNodeR(l_a.head);
+    /*vector <NodeResumen*> resumenNodes = l_a.createNodeR(l_a.head);
     for (int i = 0; i < resumenNodes.size(); i++) {
     if (0 < resumenNodes.size()) {
         cout << resumenNodes[i]->name << endl;
         }
     }
+    */
    // NodeResumen* raiz = l_a.crearArbol(resumenNodes, resumenNodes.begin(), resumenNodes.end() );
     //cout << l_a.totalNodes() <<endl;
     return 0;
