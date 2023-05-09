@@ -1,5 +1,6 @@
 #include "ListArray_utils.h"
 
+/*
 vector<NodeArray*> node_arrays_to_vector(ListArray &list_array) {
     
     vector<NodeArray*> node_array_vector;
@@ -42,3 +43,4 @@ SummaryNode* createSummaryNodeTree(ListArray &a) {
    
     return buildTree(a, nodeArrays, 0, nodeArrays.size() - 2);
 };
+*/

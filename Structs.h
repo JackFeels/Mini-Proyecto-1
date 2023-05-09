@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -22,21 +23,26 @@ struct NodeResumen{
     int size; // suma de la cantidad de elementos de ambos Nodos Array
     void* left;
     void* right;
+    string name;
 
     NodeResumen(NodeArray a, NodeArray b){
         this->capacity = a.capacity + b.capacity;
         this->size = a.size + b.size;
         this->left = &a;
         this->right = &b;
+        this->name = "Nodo Resumen " + to_string(size) + "||" + to_string(capacity);
     };
     
-    NodeResumen(NodeResumen a, NodeResumen b){
-        this->capacity = a.capacity + b.capacity;
-        this->size = a.size + b.size;
+    NodeResumen(NodeResumen *a, NodeResumen *b){
+        this->capacity = a->capacity + b->capacity;
+        this->size = a->size + b->size;
         this->left = &a;
-        this->right = &b;                             
-
+        this->right = &b;   
     };
+
+    
+
+
 };
 
 /*

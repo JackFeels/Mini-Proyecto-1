@@ -1,6 +1,7 @@
 #pragma once 
 #include "NodeArray.h"
 
+/*
 class SummaryNode {
     public:
         int s_size;
@@ -14,3 +15,4 @@ class SummaryNode {
     SummaryNode (SummaryNode *a, SummaryNode *b);
 
 };
+*/

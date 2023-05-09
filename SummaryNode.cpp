@@ -1,5 +1,5 @@
 #include "SummaryNode.h"
-
+/*
 SummaryNode::SummaryNode(NodeArray *a, NodeArray *b)
 {
     this->a_left = a;
@@ -15,3 +15,4 @@ SummaryNode::SummaryNode(SummaryNode *a, SummaryNode *b)
     this->s_size = a->s_size + b->s_size;
     this->s_capacity = a->s_capacity + b->s_capacity;
 }
+*/

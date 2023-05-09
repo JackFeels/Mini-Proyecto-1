@@ -1,5 +1,4 @@
 #include "ListArray.h"
-#include "ListArray_utils.h"
 
 int main(){
     int capacidad; // tamaño arreglo b
@@ -26,17 +25,30 @@ int main(){
     l_a.insert_right(0);
     l_a.insert_right(0);
     l_a.insert_right(0);
-    //l_a.insert_right(71);
-    //l_a.insert_right(80);
-    //l_a.insert_right(65);
-    //l_a.insert_right(96);
-
-
-    SummaryNode* root = createSummaryNodeTree(*l_a);
+    l_a.insert_right(71);
+    l_a.insert_right(80);
+    l_a.insert_right(65);
+    l_a.insert_right(96);
+    l_a.insert_right(0);
+    l_a.insert_right(0);
+    l_a.insert_right(71);
+    l_a.insert_right(80);
+    l_a.insert_right(65);
+    l_a.insert_right(96);
+    l_a.insert_right(0);
+    l_a.insert_right(0);
+    l_a.insert_right(71);
+    l_a.insert_right(80);
 
     //cout << "size: " << l_a.size() << endl;
     l_a.print();
-    //l_a.createNodeR();
+    vector <NodeResumen*> resumenNodes = l_a.createNodeR(l_a.head);
+    for (int i = 0; i < resumenNodes.size(); i++) {
+    if (0 < resumenNodes.size()) {
+        cout << resumenNodes[i]->name << endl;
+        }
+    }
+   // NodeResumen* raiz = l_a.crearArbol(resumenNodes, resumenNodes.begin(), resumenNodes.end() );
     //cout << l_a.totalNodes() <<endl;
     return 0;
     

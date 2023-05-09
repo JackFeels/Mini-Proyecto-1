@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 
+/*
 class NodeArray {
     public:
         int size;
@@ -10,3 +11,4 @@ class NodeArray {
 
         NodeArray (int capacity, NodeArray *next);
 };
+*/

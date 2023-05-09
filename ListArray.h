@@ -1,5 +1,7 @@
 #pragma once
 #include "ListArr.h"
+#include "Structs.h"
+#include <vector>
 
 class ListArray : public ListArr{
 
@@ -13,6 +15,7 @@ ListArray(int capacity);
  void insert(int v, int i); //Inserta un nuevo valor v en el índice i del ListArr.
  void print(); //Imprime por pantalla todos los valores almacenados en el ListArr.
  bool find(int v); //Busca en el ListArr si el valor v se encuentra almacenado.
- void createNodeR();
- int totalNodes();
+ vector<NodeResumen *> createNodeR(NodeArray *head);
+ int totalNodes(NodeArray *head);
+ NodeResumen* crearArbol(vector <NodeResumen*> n, vector <NodeResumen*>::iterator inicio, vector <NodeResumen*>::iterator final);
 };
